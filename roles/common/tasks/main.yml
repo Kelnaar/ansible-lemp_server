@@ -1,0 +1,17 @@
+---
+# tasks file for common
+- name: Установка LEMP-стека
+  become: yes
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: [ 'nginx', 'mariadb-server','mariadb-client','php','php-fpm' ]
+    
+
+    
+
+
+
+
+  
+
+    
+

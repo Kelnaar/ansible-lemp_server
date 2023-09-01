@@ -1,0 +1,5 @@
+---
+
+- hosts: lemp
+  roles:
+    - common
