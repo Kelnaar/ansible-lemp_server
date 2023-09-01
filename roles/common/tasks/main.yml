@@ -4,6 +4,11 @@
   become: yes
   apt: name={{ item }} update_cache=yes state=latest
   loop: [ 'nginx', 'mariadb-server','mariadb-client','php','php-fpm' ]
+  
+- name: Создание phpinfo-файла
+  template:
+    src: index.php
+    dest: /var/www/html/index.php
     
 
     
